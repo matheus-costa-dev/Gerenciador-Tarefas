@@ -1,13 +1,23 @@
-name: Ola Mundo
+name: Teste de CI
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  imprimir_ola_mundo:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Imprimir Ola Mundo
-        run: echo "Ola Mundo"
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Executar testes
+        run: npm test
