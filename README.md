@@ -1,7 +1,7 @@
 #  Gerenciador de Tarefas
 
 [![Estrelas](https://img.shields.io/github/stars/matheus-costa-dev/Gerenciador-Tarefas?style=social)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/stargazers) [![Contribuidores](https://img.shields.io/github/contributors/matheus-costa-dev/Gerenciador-Tarefas)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/graphs/contributors) [![Tamanho do Repositório](https://img.shields.io/github/repo-size/matheus-costa-dev/Gerenciador-Tarefas)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas) [![Linguagens](https://img.shields.io/github/languages/top/matheus-costa-dev/Gerenciador-Tarefas)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas)  
-[![Último Commit](https://img.shields.io/github/last-commit/matheus-costa-dev/Gerenciador-Tarefas)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/commits/main) [![Issues](https://img.shields.io/github/issues/matheus-costa-dev/Gerenciador-Tarefas)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/issues) [![Ola Mundo](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/actions/workflows/main.yml/badge.svg)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/actions/workflows/main.yml)  
+[![Último Commit](https://img.shields.io/github/last-commit/matheus-costa-dev/Gerenciador-Tarefas)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/commits/main) [![Issues](https://img.shields.io/github/issues/matheus-costa-dev/Gerenciador-Tarefas)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/issues) 
 [![License](https://img.shields.io/github/license/matheus-costa-dev/Gerenciador-Tarefas?cache=refresh)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/blob/main/LICENSE)
 
 
