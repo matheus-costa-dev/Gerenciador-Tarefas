@@ -1,8 +1,9 @@
 #  Gerenciador de Tarefas
 
-[![Build Status](https://img.shields.io/github/workflow/status/matheus-costa-dev/Gerenciador-Tarefas/CI)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/actions)  
-[![License](https://img.shields.io/github/license/matheus-costa-dev/Gerenciador-Tarefas?cache=refresh)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/blob/main/LICENSE)  
-[![Issues](https://img.shields.io/github/issues/matheus-costa-dev/Gerenciador-Tarefas)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/issues)
+[![Estrelas](https://img.shields.io/github/stars/matheus-costa-dev/Gerenciador-Tarefas?style=social)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/stargazers) [![Contribuidores](https://img.shields.io/github/contributors/matheus-costa-dev/Gerenciador-Tarefas)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/graphs/contributors) [![Tamanho do Repositório](https://img.shields.io/github/repo-size/matheus-costa-dev/Gerenciador-Tarefas)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas) [![Linguagens](https://img.shields.io/github/languages/top/matheus-costa-dev/Gerenciador-Tarefas)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas)  
+[![Último Commit](https://img.shields.io/github/last-commit/matheus-costa-dev/Gerenciador-Tarefas)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/commits/main) [![Issues](https://img.shields.io/github/issues/matheus-costa-dev/Gerenciador-Tarefas)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/issues) [![Ola Mundo](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/actions/workflows/main.yml/badge.svg)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/actions/workflows/main.yml)  
+[![License](https://img.shields.io/github/license/matheus-costa-dev/Gerenciador-Tarefas?cache=refresh)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/blob/main/LICENSE)
+
 
 **Gerenciador de Tarefas** é uma aplicação simples construída com **React** para ajudar você a gerenciar suas tarefas diárias. Com ela, você pode adicionar, remover e marcar tarefas como concluídas de maneira prática e eficiente.
 
