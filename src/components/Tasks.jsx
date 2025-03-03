@@ -8,7 +8,6 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
         const query = new URLSearchParams();
         query.set('title', title)
         query.set('description', description)
-        console.log(query)
        return navigate(`/task?${query.toString()}`)
     };
     

@@ -7,7 +7,6 @@ function AddTask({ onAddTaskClick }) {
 
     function onHandClickAdd() {
         const val = onAddTaskClick(title, description)
-        console.log(val)
         val === null ? setAlert(true) : setAlert(false)
     }
 

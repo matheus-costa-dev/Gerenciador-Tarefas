@@ -1,23 +1,34 @@
 import AddTask from "../components/addTasks";
 import Tasks from "../components/Tasks";
 import { useEffect, useState } from 'react';
-import {v4} from 'uuid'
+import { v4 } from 'uuid'
 
 function App() {
 
   const [tasks, setTasks] = useState(
-   JSON.parse(localStorage.getItem("tasks")) || []
+    JSON.parse(localStorage.getItem("tasks")) || []
   );
 
-  useEffect(()=>{
+  useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks))
   }, [tasks])
 
 
-  useEffect( () => {
+  useEffect(() => {
+
+
     async function fetchTasks() {
+
+
+      const today = new Date().toLocaleDateString();
+      const lastFetchDate = localStorage.getItem("lastFetchDate")
+   
+      if (today === lastFetchDate){
+        return null;
+      }
+
       const response = await fetch("https://jsonplaceholder.typicode.com/users/1/todos?_limit=5",
-        {method: 'GET'}
+        { method: 'GET' }
       );
       const datas = await response.json();
 
@@ -34,29 +45,30 @@ function App() {
         "Uma bailarina talentosa busca realizar seu sonho de se apresentar em um grande palco, enfrentando desafios e superando seus próprios limites."
       ]
 
-      const newDatas = datas.map( data => {
+      const newDatas = datas.map(data => {
         delete data.userId;
-        data.description = descriptions[data.id -1]
+        data.description = descriptions[data.id - 1]
         data.id = v4();
 
         return data
-      } )  
+      })
 
       await setTasks(newDatas)
+      localStorage.setItem("lastFetchDate", today)
     }
 
     fetchTasks()
-    
+
   }, [])
 
   function onAddTaskClick(title, description) {
 
-    if (!title.trim() || !description.trim()){
+    if (!title.trim() || !description.trim()) {
       return null
     }
 
     const newTask = {
-      id:v4(),
+      id: v4(),
       title: title,
       description: description,
       isCompleted: false
@@ -65,11 +77,11 @@ function App() {
 
   };
 
-  function onTaskClick(id){
-    const changeTask =  tasks.map(task => {
+  function onTaskClick(id) {
+    const changeTask = tasks.map(task => {
       if (task.id == id) {
         task.isCompleted = !task.isCompleted
-      } 
+      }
 
       return task
     });
@@ -78,30 +90,30 @@ function App() {
 
   }
 
-  function onDeleteTaskClick(id){
-    return setTasks(tasks.filter(task=> {
+  function onDeleteTaskClick(id) {
+    return setTasks(tasks.filter(task => {
       return task.id != id
     }));
   };
 
   return (
-      <div className="w-screen min-h-screen bg-slate-500 flex justify-center p-6 ">
+    <div className="w-screen min-h-screen bg-slate-500 flex justify-center p-6 ">
 
-          <div className="w-[500px]  text-center space-y-6 ">
-            <h1 className="text-white text-3xl">
-              Gerenciador de tarefas
-              </h1>
-            <AddTask onAddTaskClick= {onAddTaskClick}  />
-            <Tasks 
-            tasks= {tasks} 
-            onTaskClick = {onTaskClick}
-            onDeleteTaskClick = {onDeleteTaskClick}
-            
-            />
+      <div className="w-[500px]  text-center space-y-6 ">
+        <h1 className="text-white text-3xl">
+          Gerenciador de tarefas
+        </h1>
+        <AddTask onAddTaskClick={onAddTaskClick} />
+        <Tasks
+          tasks={tasks}
+          onTaskClick={onTaskClick}
+          onDeleteTaskClick={onDeleteTaskClick}
 
-          </div>
+        />
 
       </div>
+
+    </div>
   );
 };
 
