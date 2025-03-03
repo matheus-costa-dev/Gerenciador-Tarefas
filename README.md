@@ -1,12 +1,77 @@
-# React + Vite
+#  Gerenciador de Tarefas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Build Status](https://img.shields.io/github/workflow/status/matheus-costa-dev/Gerenciador-Tarefas/CI)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/actions)  
+[![License](https://img.shields.io/github/license/matheus-costa-dev/Gerenciador-Tarefas)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/blob/main/LICENSE)  
+[![Issues](https://img.shields.io/github/issues/matheus-costa-dev/Gerenciador-Tarefas)](https://github.com/matheus-costa-dev/Gerenciador-Tarefas/issues)
 
-Currently, two official plugins are available:
+**Gerenciador de Tarefas** é uma aplicação simples construída com **React** para ajudar você a gerenciar suas tarefas diárias. Com ela, você pode adicionar, remover e marcar tarefas como concluídas de maneira prática e eficiente.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades 🚀
 
-## Expanding the ESLint configuration
+- **Adicionar Tarefas**: Crie novas tarefas a serem realizadas.
+- **Remover Tarefas**: Exclua tarefas que não são mais necessárias.
+- **Marcar como Concluída**: Atualize o status das tarefas para "concluídas" facilmente.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tecnologias Utilizadas ⚙️
+
+- **React**: Biblioteca JavaScript para construção da interface de usuário.
+- **Vite**: Ferramenta de build rápida e moderna para desenvolvimento.
+- **ESLint**: Ferramenta para garantir a consistência e qualidade do código.
+
+## Como Rodar o Projeto 🖥️
+
+### Pré-requisitos 📦
+
+- **Node.js** e **npm** instalados na sua máquina.
+
+### Passos 🚶
+
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/matheus-costa-dev/Gerenciador-Tarefas.git
+   ```
+
+2. **Instale as dependências**:
+   Navegue até o diretório do projeto e execute o seguinte comando:
+   ```bash
+   npm install
+   ```
+
+3. **Inicie o servidor de desenvolvimento**:
+   Após a instalação, inicie o servidor local com:
+   ```bash
+   npm run dev
+   ```
+
+4. **Acesse a aplicação**:
+   Abra o navegador e acesse a URL `http://localhost:3000` para ver a aplicação em funcionamento.
+
+## Como Contribuir 🤝
+
+Se você deseja contribuir para o projeto, siga os passos abaixo:
+
+1. **Fork o repositório** clicando no botão "Fork" no topo da página.
+2. **Crie uma branch** para sua modificação:
+   ```bash
+   git checkout -b feature/minha-nova-funcionalidade
+   ```
+3. **Realize as alterações** no código e faça o commit das mudanças:
+   ```bash
+   git commit -am 'Adicionando nova funcionalidade'
+   ```
+4. **Envie suas mudanças** para o repositório remoto:
+   ```bash
+   git push origin feature/minha-nova-funcionalidade
+   ```
+5. **Abra um Pull Request** para discutir e revisar suas alterações.
+
+## Links 🌐
+
+- [Aplicação ao vivo](https://gerenciador-tarefas-inky.vercel.app)
+
+## Contato 📫
+
+- **E-mail**: [dev.matheuspc@gmail.com](mailto:dev.matheuspc@gmail.com)
+- **GitHub**: [@matheus-costa-dev](https://github.com/matheus-costa-dev)
+- **Instagram**: [@costa_matheus000](https://www.instagram.com/costa_matheus000/)
+- **LinkedIn**: [Matheus Costa](https://www.linkedin.com/in/matheus-costa-16b071149/)
