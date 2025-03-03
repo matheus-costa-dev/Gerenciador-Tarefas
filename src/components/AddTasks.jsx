@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Input from "./Input.jsx";
+import TextArea from "./TextArea.jsx";
 import Button from "./Buttons/Button.jsx";
 import ContainerIn from "./Containers/ContainerIn.jsx";
 
@@ -32,24 +33,24 @@ function AddTask({ onAddTaskClick }) {
 
             }
 
-            <Input 
-            text={title}
-            setState={setTitle}
-            placeholder={"Digite a tarefa"}
-            />
-    
-
-            <Input 
-            text={description}  
-            setState= {setDescription}
-            placeholder={"Digite a descrição da tarefa"}
+            <Input
+                text={title}
+                setState={setTitle}
+                placeholder={"Digite a tarefa"}
             />
 
-            
-            <Button 
-            text={"Adicionar"}
-            onClick={onHandClickAdd}/>
-     
+
+            <TextArea
+                text={description}
+                setState={setDescription}
+                placeholder={"Digite a descrição da tarefa"}
+            />
+
+
+            <Button
+                text={"Adicionar"}
+                onClick={onHandClickAdd} />
+
         </ContainerIn>
     )
 }
