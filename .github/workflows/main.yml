@@ -1,0 +1,13 @@
+name: Ola Mundo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  imprimir_ola_mundo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Imprimir Ola Mundo
+        run: echo "Ola Mundo"
