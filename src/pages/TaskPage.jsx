@@ -1,5 +1,11 @@
 import { ChevronLeft } from 'lucide-react';
 import { useNavigate, useSearchParams } from 'react-router-dom'
+import Title from '../components/Title.jsx';
+import Button from '../components/Buttons/Button.jsx';
+import ContainerAll from '../components/Containers/ContainerAll.jsx';
+import ContainerOut from '../components/Containers/ContainerOut.jsx';
+import ContainerIn from '../components/Containers/ContainerIn.jsx';
+
 
 function TaskPage() {
     const navigate = useNavigate()
@@ -13,34 +19,41 @@ function TaskPage() {
     }
 
     return (
-        <div className='w-screen h-screen bg-slate-500 flex justify-center p-6'>
-            <div className="w-[500px] text-center space-y-6 ">
-                <div className='text-left'>
-                    <button
-                        className='text-white p-4 cursor-pointer hover:text-blue-900 z'
-                        onClick={onBackClick}
-                    >
-                        <ChevronLeft />
+        <ContainerAll>
 
-                    </button>
-                </div>
+            <ContainerOut>
 
-                <div className='flex flex-col bg-slate-300 space-y-6 p-4 rounded-md'>
 
-                        <h1
-                            className='bg-slate-400 text-white font-bold text-3xl p-6'>
-                            {title}
-                        </h1>
+                <ContainerIn>
 
-                   
+                    <div className='flex items-center gap-0.5'>
+                        <Button
+                            text={<ChevronLeft />}
+                            onClick={onBackClick}
+                        />
+                        <Title text={title} />
+
+                    </div>
+
+
+
                     <p
-                    className='text-white bg-slate-400 p-6'
+                        className='text-white bg-slate-400 p-6'
                     >
                         {description}
                     </p>
-                </div>
-            </div>
-        </div>
+
+
+                </ContainerIn>
+
+
+            </ContainerOut>
+
+
+
+
+        </ContainerAll>
+
     )
 }
 

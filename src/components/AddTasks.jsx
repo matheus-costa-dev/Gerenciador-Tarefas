@@ -1,4 +1,7 @@
 import { useState } from "react";
+import Input from "./Input.jsx";
+import Button from "./Buttons/Button.jsx";
+import ContainerIn from "./Containers/ContainerIn.jsx";
 
 function AddTask({ onAddTaskClick }) {
     const [title, setTitle] = useState("");
@@ -8,12 +11,13 @@ function AddTask({ onAddTaskClick }) {
     function onHandClickAdd() {
         const val = onAddTaskClick(title, description)
         val === null ? setAlert(true) : setAlert(false)
+        setTitle("")
+        setDescription("")
     }
 
     return (
-        <div
-            className="flex flex-col bg-slate-300 space-y-6 p-4 rounded-md"
-        >
+        <ContainerIn>
+
             {alert &&
 
                 <div className="flex items-center p-4 mb-4 text-sm text-yellow-800 border border-yellow-300 rounded-lg bg-yellow-50 dark:bg-gray-600 dark:text-yellow-300 dark:border-yellow-800" role="alert">
@@ -27,33 +31,26 @@ function AddTask({ onAddTaskClick }) {
                 </div>
 
             }
-            <input
-                type="text"
-                placeholder="Digite a tarefa"
-                className="bg-white p-1 rounded-md"
-                value={title}
-                onChange={(event) => {
-                    setTitle(event.target.value)
-                }}
+
+            <Input 
+            text={title}
+            setState={setTitle}
+            placeholder={"Digite a tarefa"}
+            />
+    
+
+            <Input 
+            text={description}  
+            setState= {setDescription}
+            placeholder={"Digite a descrição da tarefa"}
             />
 
-            <input
-                type="text"
-                placeholder="Digite a tarefa"
-                className="bg-white p-1 rounded-md"
-                value={description}
-                onChange={(event) => {
-                    setDescription(event.target.value)
-                }}
-            />
-
-            <button
-                className="bg-slate-400 text-white cursor-pointer rounded-md hover:text-gray-900"
-                onClick={onHandClickAdd}
-            >
-                Adicionar
-            </button>
-        </div>
+            
+            <Button 
+            text={"Adicionar"}
+            onClick={onHandClickAdd}/>
+     
+        </ContainerIn>
     )
 }
 

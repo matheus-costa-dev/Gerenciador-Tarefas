@@ -1,7 +1,10 @@
-import AddTask from "../components/addTasks";
-import Tasks from "../components/Tasks";
 import { useEffect, useState } from 'react';
 import { v4 } from 'uuid'
+import Title from "../components/Title.jsx";
+import AddTask from "../components/AddTasks.jsx";
+import Tasks from "../components/Tasks.jsx";
+import ContainerAll from '../components/Containers/ContainerAll.jsx';
+import ContainerOut from '../components/Containers/ContainerOut.jsx';
 
 function App() {
 
@@ -22,8 +25,8 @@ function App() {
 
       const today = new Date().toLocaleDateString();
       const lastFetchDate = localStorage.getItem("lastFetchDate")
-   
-      if (today === lastFetchDate){
+
+      if (today === lastFetchDate) {
         return null;
       }
 
@@ -97,12 +100,11 @@ function App() {
   };
 
   return (
-    <div className="w-screen min-h-screen bg-slate-500 flex justify-center p-6 ">
+    <ContainerAll>
 
-      <div className="w-[500px]  text-center space-y-6 ">
-        <h1 className="text-white text-3xl">
-          Gerenciador de tarefas
-        </h1>
+      <ContainerOut>
+
+        <Title text={"Gerenciador de Tarefas"} />
         <AddTask onAddTaskClick={onAddTaskClick} />
         <Tasks
           tasks={tasks}
@@ -111,9 +113,11 @@ function App() {
 
         />
 
-      </div>
 
-    </div>
+      </ContainerOut>
+
+    </ContainerAll>
+
   );
 };
 
