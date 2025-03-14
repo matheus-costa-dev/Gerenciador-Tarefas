@@ -7,6 +7,8 @@
 
 **Gerenciador de Tarefas** é uma aplicação simples construída com **React** para ajudar você a gerenciar suas tarefas diárias. Com ela, você pode adicionar, remover e marcar tarefas como concluídas de maneira prática e eficiente.
 
+[Gravação de tela de 2025-03-14 10-29-09.webm](https://github.com/user-attachments/assets/effb79b7-9efa-463a-948e-01c1553acad7)
+
 ## Funcionalidades 🚀
 
 - **Adicionar Tarefas**: Crie novas tarefas a serem realizadas.
