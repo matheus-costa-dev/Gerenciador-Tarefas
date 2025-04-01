@@ -40,8 +40,8 @@ function SignUp() {
     <Layout>
     <Navbar />
     <Section >
-    <form className={`flex flex-col gap-4 p-5 rounded-2xl ${bgForm} ${textColor}`} onSubmit={(e)=> onHandleSubmit(e)} >
-    <h1 className='text-center text-2xl font-thin tracking-tight'>SignUp</h1>
+    <form className={`flex flex-col gap-4 text-2xl lg:text-base lg:p-5 rounded-2xl ${bgForm} ${textColor}`} onSubmit={(e)=> onHandleSubmit(e)} >
+    <h1 className='text-center text-3xl  font-thin tracking-tight'>SignUp</h1>
         <input type="text" placeholder='Nome' className={`rounded-2xl px-4 focus:outline-none ${isFNameFocus ? bgOnFocus : bgOutFocus}`} onChange={(e)=>setFName(e.target.value)} onFocus={()=>setIsFNameFocus(true)  } onBlur={()=>setIsFNameFocus(false)}/>
         <input type="text" placeholder='Sobrenome' className={`rounded-2xl px-4 focus:outline-none ${isLNameFocus ? bgOnFocus : bgOutFocus}`} onChange={(e)=>setLName(e.target.value)} onFocus={()=>setIsLNameFocus(true)  } onBlur={()=>setIsLNameFocus(false)}/>
         <input type="email" placeholder='Email' className={`rounded-2xl px-4 focus:outline-none ${isEmailFocus ? bgOnFocus : bgOutFocus}`} onChange={(e)=>setEmail(e.target.value)} onFocus={()=>setIsEmailFocus(true)  } onBlur={()=>setIsEmailFocus(false)}/>

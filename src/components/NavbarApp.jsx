@@ -28,7 +28,7 @@ function NavbarApp() {
             >
                 {user.fname}
             </h2>
-            <ul className='flex gap-4 items-center'>
+            <ul className='flex flex-wrap text-2xl lg:text-base gap-4 items-center'>
                 {links.map((link, index) => (
                     <li key={index}>
                         <button 

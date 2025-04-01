@@ -33,11 +33,11 @@ function AppTaskDescription() {
                 <SectionApp title={"Nenhuma tarefa encontrada com esse id"} />
             ) : (
                 <SectionApp>
-                    <section className='w-full lg:w-1/2 flex items-center'>
+                    <section className='w-full text-2xl lg:text-base lg:w-1/2 flex items-center'>
                         <FaArrowLeft onClick={() => navigate("/app")} className='' />
                         <h2 className='w-full text-center'>{task.title}</h2>
                     </section>
-                    <div className={`w-full lg:w-1/2 flex rounded-2xl flex-col gap-4 p-4 ${bgForm}`}>
+                    <div className={`w-full text-2xl lg:text-base lg:w-1/2 flex rounded-2xl flex-col gap-4 p-4 ${bgForm}`}>
                         <span className='tracking-tighter font-light'>{task.description}</span>
 
                     </div>

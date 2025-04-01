@@ -70,7 +70,7 @@ function App() {
     <Layout>
       <NavbarApp />
       <SectionApp title={"Tarefas"}>
-        <section className={`w-full lg:w-1/2 flex flex-col items-center gap-4 rounded-2xl p-4 ${bgForm}`}>
+        <section className={`w-full text-2xl lg:text-base lg:w-1/2 flex flex-col items-center gap-4 rounded-2xl p-4 ${bgForm}`}>
           <h2>Nova tarefa</h2>
           <input
             type="text"
@@ -98,7 +98,7 @@ function App() {
           </button>
         </section>
 
-        <section className={`w-full lg:w-1/2 flex flex-col items-center gap-4 mb-5 rounded-2xl p-4 ${bgForm}`}>
+        <section className={`w-full lg:w-1/2 text-2xl lg:text-base flex flex-col items-center gap-4 mb-5 rounded-2xl p-4 ${bgForm}`}>
           <h2>Todas tarefas</h2>
           <ul className="flex flex-col gap-4 justify-center items-center w-full">
             {isLoading ? (

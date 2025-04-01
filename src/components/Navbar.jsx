@@ -17,9 +17,9 @@ function Navbar() {
     }
    }
   return (
-    <nav className='flex justify-around pb-10'>
+    <nav className='flex flex-wrap justify-around pb-10'>
         <h2 className='text-2xl' onClick={()=>navigate("/")}>TaskMaster</h2>
-        <ul className='flex gap-4 items-center'>
+        <ul className='flex gap-4 items-center text-2xl lg:text-base'>
             { links.map((link, index) => {
                 return (
                     <li key={index}>
