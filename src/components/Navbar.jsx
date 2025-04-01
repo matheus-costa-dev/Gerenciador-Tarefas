@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 const links = [
     {text:"Home", path:"/"},
@@ -9,14 +9,21 @@ const links = [
 
 function Navbar() {
    const navigate = useNavigate()
+   const location = useLocation()
+
+   function handleNavigation(path){
+    if (!location.pathname.endsWith(path)){
+        navigate(path)
+    }
+   }
   return (
     <nav className='flex justify-around'>
-        <h2 className='text-2xl' onClick={()=>navigate("/")}>MC</h2>
+        <h2 className='text-2xl' onClick={()=>navigate("/")}>TaskMaster</h2>
         <ul className='flex gap-4 items-center'>
             { links.map((link, index) => {
                 return (
                     <li key={index}>
-                        <button onClick={()=>{navigate(link.path)}} >{link.text}</button>
+                        <button onClick={()=>{handleNavigation(link.path)}} >{link.text}</button>
                     </li>
                 )
             } )}

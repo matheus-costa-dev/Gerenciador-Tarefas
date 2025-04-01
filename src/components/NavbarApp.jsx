@@ -15,7 +15,6 @@ function NavbarApp() {
     
 
     const handleNavigation = (path) => {
-        // Se já estivermos na rota alvo, não navegar novamente
         if (!location.pathname.endsWith(path)) {
             navigate(path)
         }
