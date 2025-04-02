@@ -1,5 +1,9 @@
 # TaskMaster - Sistema de Gerenciamento de Tarefas
 
+## 🎨 Demonstração
+
+https://github.com/user-attachments/assets/844bafe7-2a12-4d8c-8c8f-54b2e965441f
+
 ## 📝 Descrição
 
 O **TaskMaster** é uma aplicação web moderna para gerenciamento pessoal de tarefas, desenvolvida com React e Firebase. Com uma interface intuitiva e recursos eficientes, ajuda usuários a organizarem suas atividades diárias, aumentando produtividade e controle sobre seus compromissos.
@@ -71,10 +75,6 @@ taskmaster/
 └── README.md             # Documentação
 ```
 
-## 🎨 Screenshots
-
-(Adicione capturas de tela da aplicação aqui)
-
 ## 🌟 Recursos Futuros
 
 - [ ] Categorização de tarefas
@@ -97,17 +97,8 @@ Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICE
 
 ---
 
-**Desenvolvido com ❤️ por [Seu Nome]**  
-📧 Contato: seu-email@exemplo.com  
-🌐 LinkedIn: [seu-linkedin]  
-
-(Substitua os campos entre colchetes com suas informações reais)
+**Desenvolvido com ❤️ por Matheus Pereira Costa**  
+📧 Contato: seu-dev.matheuspc@gmail.com  
+🌐 LinkedIn: https://www.linkedin.com/in/matheus-pc/  
 
 ---
-
-Esta descrição fornece uma visão abrangente do projeto, destacando seus principais aspectos técnicos e funcionais. Você pode personalizar ainda mais adicionando:
-- Screenshots reais da aplicação
-- Link para demonstração ao vivo
-- Badges de status (build, coverage, etc.)
-- Guia mais detalhado de configuração do Firebase
-- Informações sobre testes
