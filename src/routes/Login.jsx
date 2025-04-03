@@ -27,7 +27,7 @@ function Login() {
     try {
         const user = await loginFirebase(email, password)
         const userData = await getUserData(user.uid)
-        toast.success(`Bem vindo ${userData.fName}`, {id:toastId})
+        toast.success(`Bem vindo ${userData.fname}`, {id:toastId})
         navigate("/app")
     } catch (error) {
         toast.error(error.message, {id:toastId})
@@ -38,7 +38,7 @@ function Login() {
     <Layout>
     <Navbar />
     <Section >
-    <form className={`text-2xl lg:text-base flex flex-col gap-4 lg:p-5 rounded-2xl ${bgForm} ${textColor}`} onSubmit={(e)=>onHandleSubmit(e)} >
+    <form className={`text-2xl lg:text-base flex flex-col gap-4 p-2 lg:p-5 rounded-2xl ${bgForm} ${textColor}`} onSubmit={(e)=>onHandleSubmit(e)} >
     <h1 className='text-center text-3xl font-thin tracking-tight'>Login</h1>
         <input type="email" placeholder='Email' className={`rounded-2xl px-4 focus:outline-none ${isEmailFocus ? bgOnFocus : bgOutFocus}`} onChange={(e)=>setEmail(e.target.value)} onFocus={()=>setIsEmailFocus(true)  } onBlur={()=>setIsEmailFocus(false)}/>
         <input type="password" placeholder='Senha' className={`rounded-2xl px-4 focus:outline-none ${isPasswordFocus ? bgOnFocus : bgOutFocus}`} onChange={(e)=>setPassword(e.target.value)} onFocus={()=>setIsPasswordFocus(true)  } onBlur={()=>setIsPasswordFocus(false)}/>

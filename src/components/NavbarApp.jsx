@@ -5,7 +5,7 @@ const links = [
     {text:"Perfil", path:"profile"},
 ]
 
-function NavbarApp() {
+function NavbarApp( { fname }) {
     const { user, isLoading ,logOut } = useAuth()
     const navigate = useNavigate()
     const location = useLocation()
@@ -26,7 +26,7 @@ function NavbarApp() {
                 className='text-2xl cursor-pointer' 
                 onClick={() => navigate("/app")}
             >
-                {user.fname}
+                { fname ? fname : user.fname }
             </h2>
             <ul className='flex flex-wrap text-2xl lg:text-base gap-4 items-center'>
                 {links.map((link, index) => (

@@ -11,15 +11,15 @@ export function AuthProvider({ children }) {
     const [isLoading, setIsLoading] = useState(true)
 
     const navigate = useNavigate()
-    
-    useEffect(() => {    
+
+    useEffect(() => {
         const onSubsCribe = onAuthStateChanged(auth, async (currentUser) => {
             if (!currentUser) {
                 navigate("/login");
                 setIsLoading(false);
                 return;
             }
-            
+
             try {
                 // Buscar os dados do usuário no Firestore
                 const userDoc = await getDoc(doc(db, "users", currentUser.uid));
@@ -46,71 +46,71 @@ export function AuthProvider({ children }) {
     }, [navigate])
 
 
-    async function addNewTask(newTask){
+    async function addNewTask(newTask) {
         if (!user) return null
-        try{
-            const updatedTasks = [ ...(user.tasks || []), newTask]
-            const userDoc = doc(db,"users",user.uid)
-            await updateDoc(userDoc, {tasks: updatedTasks})
-            setUser((prevUser) => ({...prevUser, tasks: updatedTasks}))
+        try {
+            const updatedTasks = [...(user.tasks || []), newTask]
+            const userDoc = doc(db, "users", user.uid)
+            await updateDoc(userDoc, { tasks: updatedTasks })
+            setUser((prevUser) => ({ ...prevUser, tasks: updatedTasks }))
         } catch (error) {
             console.error(error.message)
         }
     }
 
 
-    async function removeTask(taskId){
+    async function removeTask(taskId) {
         if (!user || !user.tasks) return null
-        try{
-            const updatedTasks = user.tasks.filter(task=> task.id !== taskId)
-            const userDoc = doc(db,"users",user.uid)
-            await updateDoc(userDoc, {tasks: updatedTasks})
-            setUser((prevUser) => ({...prevUser, tasks: updatedTasks}))
+        try {
+            const updatedTasks = user.tasks.filter(task => task.id !== taskId)
+            const userDoc = doc(db, "users", user.uid)
+            await updateDoc(userDoc, { tasks: updatedTasks })
+            setUser((prevUser) => ({ ...prevUser, tasks: updatedTasks }))
 
         } catch (error) {
             console.error(error.message)
         }
     }
 
-    async function changeStatusTask(taskId){
+    async function changeStatusTask(taskId) {
         if (!user || !user.tasks) return null
 
-        try{
+        try {
             const updatedTasks = user.tasks.map(task => {
                 if (task.id === taskId) {
                     task.isCompleted = !task.isCompleted
                     if (task.isCompleted) task.finishedAt = new Date().toLocaleDateString()
-                } 
-                
+                }
+
                 return task
             }
             )
 
             const userDoc = doc(db, "users", user.uid)
-            await updateDoc(userDoc, {tasks: updatedTasks})
-            setUser((prevUser) => ({...prevUser, tasks: updatedTasks}))
+            await updateDoc(userDoc, { tasks: updatedTasks })
+            setUser((prevUser) => ({ ...prevUser, tasks: updatedTasks }))
         } catch (error) {
             console.error(error.message)
         }
     }
 
 
-    function getTask(taskId){
+    function getTask(taskId) {
         if (!user || !user.tasks) return null
         const task = user.tasks.find(task => task.id === taskId)
         return task
     }
 
-    async function getUserData(){
+    async function getUserData() {
         if (!user) return null;
 
-        try{
-            const userDoc = doc(db,"users",user.uid);
+        try {
+            const userDoc = doc(db, "users", user.uid);
             const userData = await getDoc(userDoc);
-            if (userData.exists()){
+            if (userData.exists()) {
                 return userData.data();
             }
-            
+
             return null;
 
 
@@ -119,14 +119,29 @@ export function AuthProvider({ children }) {
         }
     }
 
-    function logOut(){
+    function logOut() {
         auth.signOut()
         setUser(null)
         navigate("/")
     }
 
+    async function changeUserData(fname, lname, email) {
+
+        try {
+            const userDoc = doc(db, "users", user.uid)
+            await updateDoc(userDoc, {
+                fname,
+                lname,
+                email
+            })
+        } catch (error) {
+            console.error(error.message)
+        }
+
+    }
+
     return (
-        <AuthContext.Provider value={{user, isLoading, addNewTask, removeTask, changeStatusTask, getTask, logOut, getUserData}}>
+        <AuthContext.Provider value={{ user, isLoading, addNewTask, removeTask, changeStatusTask, getTask, logOut, getUserData, changeUserData }}>
             {children}
         </AuthContext.Provider>
     )
